@@ -1,16 +1,21 @@
 package com.grid.product.models;
 
+
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
-import lombok.Builder;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.NonNull;
+import lombok.Setter;
 
-import java.math.BigDecimal;
 
 @Data
-@Builder
-public class Product {
+@AllArgsConstructor(access = AccessLevel.PRIVATE)
+@NoArgsConstructor
+public class Article {
 
     @NonNull
     @NotNull
@@ -19,9 +24,6 @@ public class Product {
 
     private String sku;
 
-    @NonNull
-    @NotNull
-    private Long availability;
     private String name_title;
 
     private String description;
@@ -39,5 +41,4 @@ public class Product {
     private String product_url;
 
     private String brand;
-
 }

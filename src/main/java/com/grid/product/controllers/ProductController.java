@@ -1,10 +1,11 @@
 package com.grid.product.controllers;
 
+import com.grid.product.assemblers.ProductAssembler;
 import com.grid.product.converters.ProductMapper;
 import com.grid.product.models.dtos.ProductDto;
 import com.grid.product.services.ProductService;
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.repository.query.Param;
+import org.springframework.hateoas.EntityModel;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,14 +22,16 @@ public class ProductController {
 
     private final ProductMapper productMapper;
 
-    @GetMapping("/getByUnique_id/{uniq_id}")
-    public ProductDto getByUniqueId(@PathVariable String uniq_id){
-        return productMapper.modelToDto(productService.getByUniqueId(uniq_id));
+    private final ProductAssembler productAssembler;
+
+    @GetMapping("/getByUniqueId/{uniqueId}")
+    public EntityModel<ProductDto> getByUniqueId(@PathVariable String uniqueId){
+        return productAssembler.toModel(productMapper.modelToDto(productService.getByUniqueId(uniqueId)));
     }
 
     @GetMapping("/getBySku/{sku}")
-    public List<ProductDto> getBySku(@PathVariable String sku){
-        return productService.getBySku(sku).stream().map(productMapper::modelToDto).toList();
+    public List<EntityModel<ProductDto>> getBySku(@PathVariable String sku){
+        return productService.getBySku(sku).stream().map(productMapper::modelToDto).map(productAssembler::toModel).toList();
     }
 
 }
