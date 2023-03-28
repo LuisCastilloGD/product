@@ -1,10 +1,12 @@
 package com.grid.product.models.dtos;
 
+import lombok.Builder;
 import lombok.Data;
 
 import java.math.BigDecimal;
 
 @Data
+@Builder
 public class ProductDto {
     private String uniqId;
 
