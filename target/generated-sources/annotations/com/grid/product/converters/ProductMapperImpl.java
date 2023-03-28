@@ -3,13 +3,14 @@ package com.grid.product.converters;
 import com.grid.product.models.Product;
 import com.grid.product.models.Product.ProductBuilder;
 import com.grid.product.models.dtos.ProductDto;
+import com.grid.product.models.dtos.ProductDto.ProductDtoBuilder;
 import java.math.BigDecimal;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-03-24T11:05:51-0600",
+    date = "2023-03-27T14:55:59-0600",
     comments = "version: 1.4.2.Final, compiler: javac, environment: Java 19.0.1 (Homebrew)"
 )
 @Component
@@ -21,24 +22,24 @@ public class ProductMapperImpl implements ProductMapper {
             return null;
         }
 
-        ProductDto productDto = new ProductDto();
+        ProductDtoBuilder productDto = ProductDto.builder();
 
-        productDto.setUniqId( product.getUniqId() );
-        productDto.setSku( product.getSku() );
-        productDto.setAvailability( product.getAvailability() );
-        productDto.setName_title( product.getName_title() );
-        productDto.setDescription( product.getDescription() );
+        productDto.uniqId( product.getUniqId() );
+        productDto.sku( product.getSku() );
+        productDto.availability( product.getAvailability() );
+        productDto.name_title( product.getName_title() );
+        productDto.description( product.getDescription() );
         if ( product.getList_price() != null ) {
-            productDto.setList_price( new BigDecimal( product.getList_price() ) );
+            productDto.list_price( new BigDecimal( product.getList_price() ) );
         }
-        productDto.setSale_price( product.getSale_price() );
-        productDto.setCategory( product.getCategory() );
-        productDto.setCategory_tree( product.getCategory_tree() );
-        productDto.setAverage_product_rating( product.getAverage_product_rating() );
-        productDto.setProduct_url( product.getProduct_url() );
-        productDto.setBrand( product.getBrand() );
+        productDto.sale_price( product.getSale_price() );
+        productDto.category( product.getCategory() );
+        productDto.category_tree( product.getCategory_tree() );
+        productDto.average_product_rating( product.getAverage_product_rating() );
+        productDto.product_url( product.getProduct_url() );
+        productDto.brand( product.getBrand() );
 
-        return productDto;
+        return productDto.build();
     }
 
     @Override
