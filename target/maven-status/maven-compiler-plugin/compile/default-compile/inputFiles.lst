@@ -1,0 +1,14 @@
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/feignclients/InventoryFeignClient.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/converters/ProductMapper.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/services/ProductService.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/assemblers/ProductAssembler.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/models/dtos/ProductDto.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/ProductApplication.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/models/Product.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/models/Article.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/exceptions/ProductNotAvailableException.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/models/Item.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/exceptions/advisors/ProductNotAvailableAdvice.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/feignclients/CatalogFeignClient.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/services/implementations/ProductServiceImpl.java
+/Users/lcastillo/IdeaProjects/microservices/product/src/main/java/com/grid/product/controllers/ProductController.java

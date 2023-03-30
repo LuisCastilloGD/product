@@ -1,0 +1,17 @@
+com/grid/product/feignclients/InventoryFeignClient.class
+com/grid/product/models/dtos/ProductDto$ProductDtoBuilder.class
+com/grid/product/models/Article.class
+com/grid/product/controllers/ProductController.class
+com/grid/product/assemblers/ProductAssembler.class
+com/grid/product/services/implementations/ProductServiceImpl.class
+com/grid/product/ProductApplication.class
+com/grid/product/converters/ProductMapper.class
+com/grid/product/models/Product.class
+com/grid/product/converters/ProductMapperImpl.class
+com/grid/product/exceptions/advisors/ProductNotAvailableAdvice.class
+com/grid/product/models/Item.class
+com/grid/product/models/Product$ProductBuilder.class
+com/grid/product/models/dtos/ProductDto.class
+com/grid/product/feignclients/CatalogFeignClient.class
+com/grid/product/exceptions/ProductNotAvailableException.class
+com/grid/product/services/ProductService.class
