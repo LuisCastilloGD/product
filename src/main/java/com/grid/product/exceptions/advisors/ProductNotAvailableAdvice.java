@@ -11,9 +11,9 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 public class ProductNotAvailableAdvice {
 
     @ResponseBody
-    @ResponseStatus(HttpStatus.NOT_FOUND)
+    @ResponseStatus(HttpStatus.OK)
     @ExceptionHandler(ProductNotAvailableException.class)
-    public String productNotFoundHandler(final ProductNotAvailableException e) {
+    public String productNotAvailableHandler(final ProductNotAvailableException e) {
         return e.getMessage();
     }
 
